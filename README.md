@@ -2,23 +2,23 @@
 Matlab code for 4Pi-SIM reconstruction
 
 # Requirements
-Microsoft Windows 7 or newer, 64-bit
-Matlab R2023a or newer
+  - Microsoft Windows 7 or newer, 64-bit
+  - Matlab R2023a or newer
 
 # How to run
 
-Step 1: Place the ‘Data’ folder (including raw dataA, dataB and OTF) in the same folder as the main code ‘Main_4Pi_SIM_reconstruction.m’.
+Step 1: Download the example dataset and place the ‘Data’ folder (including raw dataA, dataB, and OTF) in the same folder as the main code ‘Main_4Pi_SIM_reconstruction.m’.
 
-Download links for ‘Data’ folder: https://doi.org/10.6084/m9.figshare.25714068.
+The example dataset is available at: https://doi.org/10.6084/m9.figshare.25714068.
 
-Step 2: Open ‘Main_4Pi_SIM_reconstruction.m’ code. Let the initial parameter ‘isOPD=1’, and run this code then select the raw data ‘ER_T86_A.tif’, the code will automatically select the optimal OPLD OTF for Wiener reconstruction. If ordinary reconstruction is needed, you can let the initial parameter ‘isOPD=0’, then this code won’t estimate OPLD, just reconstruct with zero OPLD OTF.
+Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code. Set the initial parameter 'isOPD=1' and run this code. Then, select the raw data 'ER_T86_A.tif'. The code will automatically choose the optimal OPD OTF for Wiener reconstruction. If traditional reconstruction is required, set the initial parameter 'isOPD=0'. In this case, the code will not estimate OPD and reconstruct with a zero OPD OTF.
 
 # Testing environments
-Microsoft Windows 11 64-bit
-Matlab R2023a
-CPU: 12th Gen Intel(R) Core(TM) i9-12900K 3.20 GHz
-GPU: NVIDIA GeForce RTX 3080 Ti
-CUDA 11. 4. 136 driver
+  - Microsoft Windows 11 64-bit
+  - Matlab R2023a
+  - CPU: 12th Gen Intel(R) Core(TM) i9-12900K 3.20 GHz
+  - GPU: NVIDIA GeForce RTX 3080 Ti
+  - CUDA 11. 4. 136 driver
 
 # Tested run time
 225 s
