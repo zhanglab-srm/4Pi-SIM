@@ -7,6 +7,7 @@ close all
 dbstop if error
 warning off
 addpath('./Functions')
+addpath('./OTF')
 %% Initial parameters
 isOPLD = 1;  % 0: dont estimate OPLD; 1: estimate OPLD
 pixelsize = 63.73;        % rawdata xy sampling
@@ -26,7 +27,7 @@ Mode = '3D-SIM-3';  % imaging mode
 M = 102;            % System magnification
 
 % Six-beam OTF
-OTF_6B_Path='Data\OTF\Assemble-6BOTF-abs.tif';
+OTF_6B_Path='OTF\6BOTF.tif';
 
 bgflag = 1;            % background noise
 bgname = 'Functions\background.tif';

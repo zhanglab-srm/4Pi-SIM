@@ -55,7 +55,7 @@ clear k_x k_y
 
 % OTF and OTF mask
 % Mask_4PS=Make_4PS_mask(); % mask with 8 um depth and 40 nm step size
-Mask_4PS=imreadstack('Data/OTF/Mask_4PS.tif');
+Mask_4PS=imreadstack('OTF/Mask_4PS.tif');
 Mask_4PS = GenerateOTF_Fre_revised(Mask_4PS, pixelsizeZ, pixelsizeZ, numz, n);
 otfmask0 = Mask_4PS(:,:,1:size(Mask_4PS,3)/3);
 otfmask2 = Mask_4PS(:,:,(size(Mask_4PS,3)/3+1):2*size(Mask_4PS,3)/3);

@@ -100,84 +100,16 @@ if isOPLD == 1
 %     disp(opld)
     disp('OPLD(nm)：')
     disp(OPLD_total)
-    %% choose OPLD OTF
-    if -180 <= OPLD_total && OPLD_total < -170  % OPLD-180
-        HA= imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-180.tif');
-    elseif -170 <= OPLD_total && OPLD_total < -160  % OPLD-170
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-170.tif');
-    elseif -160 <= OPLD_total && OPLD_total < -150  % OPLD-160
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-160.tif');
-    elseif -150 <= OPLD_total && OPLD_total < -140  % OPLD-150
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-150.tif');
-    elseif -140 <= OPLD_total && OPLD_total < -130  % OPLD-140
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-140.tif');
-    elseif -130 <= OPLD_total && OPLD_total < -120  % OPLD-130
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-130.tif');
-    elseif -120 <= OPLD_total && OPLD_total < -110  % OPLD-120
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-120.tif');
-    elseif -110 <= OPLD_total && OPLD_total < -100  % OPLD-110
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-110.tif');
-    elseif -100 <= OPLD_total && OPLD_total < -90  % OPLD-100
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-100.tif');
-    elseif -90 <= OPLD_total && OPLD_total < -80  % OPLD-90
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-90.tif');
-    elseif -80 <= OPLD_total && OPLD_total < -70  % OPLD-80
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-80.tif');
-    elseif -70 <= OPLD_total && OPLD_total < -60  % OPLD-70
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-70.tif');
-    elseif -60 <= OPLD_total && OPLD_total < -50  % OPLD-60
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-60.tif');
-    elseif -50 <= OPLD_total && OPLD_total < -40  % OPLD-50
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-160.tif');
-    elseif -40 <= OPLD_total && OPLD_total < -30  % OPLD-40
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-40.tif');
-    elseif -30 <= OPLD_total && OPLD_total < -20  % OPLD-30
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-30.tif');
-    elseif -20 <= OPLD_total && OPLD_total < -10  % OPLD-20
-        HA= imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-20.tif');
-    elseif -10 <= OPLD_total && OPLD_total < 0  % OPLD-10
-        HA= imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_-10.tif');
-    elseif 0 <= OPLD_total && OPLD_total < 10  % OPLD0
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_0.tif');
-    elseif 10 <= OPLD_total && OPLD_total < 20  % OPLD10
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_10.tif');
-    elseif 20 <= OPLD_total && OPLD_total < 30  % OPLD20
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_20.tif');
-    elseif 30 <= OPLD_total && OPLD_total < 40  % OPLD30
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_30.tif');
-    elseif 40 <= OPLD_total && OPLD_total < 50  % OPLD40
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_40.tif');
-    elseif 50 <= OPLD_total && OPLD_total < 60  % OPLD50
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_50.tif');
-    elseif 60 <= OPLD_total && OPLD_total < 70  % OPLD60
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_60.tif');
-    elseif 70 <= OPLD_total && OPLD_total < 80  % OPLD70
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_70.tif');
-    elseif 80 <= OPLD_total && OPLD_total < 90  % OPLD80
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_80.tif');
-    elseif 90 <= OPLD_total && OPLD_total < 100  % OPLD90
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_90.tif');
-    elseif 100 <= OPLD_total && OPLD_total < 110  % OPLD100
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_100.tif');
-    elseif 110 <= OPLD_total && OPLD_total < 120  % OPLD110
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_110.tif');
-    elseif 120 <= OPLD_total && OPLD_total < 130  % OPLD120
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_120.tif');
-    elseif 130 <= OPLD_total && OPLD_total < 140  % OPLD130
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_130.tif');
-    elseif 140 <= OPLD_total && OPLD_total < 150  % OPLD140
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_140.tif');
-    elseif 150 <= OPLD_total && OPLD_total < 160  % OPLD150
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_150.tif');
-    elseif 160 <= OPLD_total && OPLD_total < 170  % OPLD160
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_160.tif');
-    elseif 170 <= OPLD_total && OPLD_total < 180  % OPLD170
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_170.tif');
+    %% choose OPLD OTF: We provide two representative OTFs selected from the 4Pi-SIM OTF library.
+    if 20 <= OPLD_total && OPLD_total < 30  % OPLD20
+        H_real = imreadstack('OTF\4PSOTF_OPLD_20_real.tif');
+        H_imag = imreadstack('OTF\4PSOTF_OPLD_20_imag.tif');
     elseif 180 <= OPLD_total && OPLD_total < 190  % OPLD180
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_180.tif');
-    elseif 190 <= OPLD_total && OPLD_total < 200  % OPLD190
-        HA = imreadstack('Data\OTF\4Pi-SIMOTF_OPLD_190.tif');
+        H_real = imreadstack('OTF\4PSOTF_OPLD_180_real.tif');
+        H_imag = imreadstack('OTF\4PSOTF_OPLD_180_imag.tif');
     end
+
+    HA=complex(H_real,H_imag);
     disp('Start to generate 3D OTF,please wait...')
     H_allA = GenerateOTF_Fre_revised(HA, Beads_pixesizeZ, pixelsizeZ, numz, max_xy);  % 3D OTF 疏采样, 三个相位的OTF 低频的OTF 移动p的OTF 移动p/2的OTF
     disp('3D OTF Generation is completed.')
@@ -188,9 +120,9 @@ if isOPLD == 1
     end
 else  % dont estimate OPLD
     disp('Zero OPLD OTF reconstruction...')
-    OTF_Path='Data\OTF\4Pi-SIMOTF_OPLD_20.tif';
-    HA = imreadstack(OTF_Path);
-    HA=abs(HA);
+    H_real = imreadstack('OTF\4PSOTF_OPLD_0_real.tif');
+    H_imag = imreadstack('OTF\4PSOTF_OPLD_0_imag.tif');
+    HA=complex(H_real,H_imag);
     % resampling
     disp('Start to generate 3D OTF,please wait...')
     H_allA = GenerateOTF_Fre_revised(HA, Beads_pixesizeZ, pixelsizeZ, numz, max_xy);
