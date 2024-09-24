@@ -30,7 +30,7 @@ The 'SIM result' folder will be generated, which includes an 'ER_T86_A_parameter
 For any questions / comments about this software, please contact zhanglab@westlake.edu.cn.
 
 # Copyright and Software License
-Copyright (c) 2024 Zhang Lab, Westlake University, Hangzhou, China
+Copyright (c) 2024 @ Zhang Lab, Westlake University, Hangzhou, China
 
 The package is licenced under the [GNU GPL](https://www.gnu.org/licenses/). 
 
