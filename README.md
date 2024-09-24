@@ -7,7 +7,7 @@ Matlab code for 4Pi-SIM reconstruction
 
 # How to run
 
-Step 1: Step 1: Download the example dataset and place the 'OTF' folder, which includes raw data A, data B, and OTF, in the same directory as the main code 'Main_4Pi_SIM_reconstruction.m'.
+Step 1: Download the example dataset and place the 'OTF' folder, which includes raw data A, data B, and OTF, in the same directory as the main code 'Main_4Pi_SIM_reconstruction.m'.
 
 The example dataset and 'OTF' folder is available at: https://doi.org/10.6084/m9.figshare.25714068.
 
