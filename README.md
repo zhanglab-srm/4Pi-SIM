@@ -25,3 +25,12 @@ Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code and set the initial parame
 
 # Expected output
 The 'SIM result' folder will be generated, which includes an 'ER_T86_A_parameter.mat' file where the estimated parameters (wave vector, initial phase, contrast, and OPLD phase) are saved; a 'Processing_Data.txt' file where the initial and processing parameters of the code are saved; 'SpectrumWienerER_T86_A.tif', which is the spectrum of the reconstructed image, and 'WienerER_T86_A.tif', which is the final reconstructed image.
+
+# Contact
+For any questions / comments about this software, please contact zhanglab@westlake.edu.cn.
+
+# Copyright and Software License
+Copyright (c) 2024 Zhang Lab, Westlake University, Hangzhou, China
+
+The package is licenced under the [GNU GPL](https://www.gnu.org/licenses/). 
+
