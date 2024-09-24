@@ -11,7 +11,7 @@ Step 1: Step 1: Download the example dataset and place the 'Data' folder, which 
 
 The example dataset is available at: https://doi.org/10.6084/m9.figshare.25714068.
 
-Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code and set the initial parameter 'isOPD' to 1. Run this code. Next, select the raw data file 'ER_T86_A.tif'. The code will automatically choose the optimal OPD OTF for Wiener reconstruction. If traditional reconstruction is needed, set the initial parameter 'isOPD' to 0. In this case, the code will not estimate OPD and will reconstruct with a zero OPD OTF.
+Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code and set the initial parameter 'isOPD' to 1. Run this code. Next, select the raw data file 'Fig5a_ER_4Pi_SIM_A.tif'. The code will automatically choose the optimal OPD OTF for Wiener reconstruction. If traditional reconstruction is needed, set the initial parameter 'isOPD' to 0. In this case, the code will not estimate OPD and will reconstruct with a zero OPD OTF.
 
 # Testing environments
   - Microsoft Windows 11 64-bit
