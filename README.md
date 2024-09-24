@@ -6,6 +6,7 @@ Microsoft Windows 7 or newer, 64-bit
 Matlab R2023a or newer
 
 How to run
+
 Step 1: Place the ‘Data’ folder (including raw dataA, dataB and OTF) in the same folder as the main code ‘Main_4Pi_SIM_reconstruction.m’.
 
 Download links for ‘Data’ folder: https://doi.org/10.6084/m9.figshare.25714068.
