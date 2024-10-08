@@ -7,11 +7,11 @@ Matlab code for 4Pi-SIM reconstruction
 
 # How to run
 
-Step 1: Download the example dataset and place the 'OTF' folder, which includes raw data A, data B, and OTFs, in the same directory as the main code 'Main_4Pi_SIM_reconstruction.m'.
+Step 1: Download the example dataset and place the 'OTF' folder containing raw data A, data B, and OTFs in the same directory as the main code 'Main_4Pi_SIM_reconstruction.m'.
 
-The example dataset and 'OTF' folder is available at: https://doi.org/10.6084/m9.figshare.25714068.
+The example dataset and the 'OTF' folder are available at: https://doi.org/10.6084/m9.figshare.25714068.
 
-Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code and set the initial parameter 'isOPLD' to 1. Run this code. Next, select the raw data file 'Fig5a_ER_4Pi_SIM_A.tif'. The code will automatically choose the optimal OPLD OTF for Wiener reconstruction. If traditional reconstruction is needed, set the initial parameter 'isOPLD' to 0. In this case, the code will not estimate OPLD and will reconstruct with a zero OPLD OTF.
+Step 2: Open the code 'Main_4Pi_SIM_reconstruction.m'. Set the initial parameter 'isOPLD=1' and run the code. When selecting the raw data, the code will automatically determine the OTF with optimal OPLD for Wiener reconstruction. If standard reconstruction is preferred, setting the initial parameter to 'isOPLD=0' will cause the code to bypass OPLD estimation and reconstruct the data using an OTF with zero OPLD.
 
 # Testing environments
   - Microsoft Windows 11 64-bit
@@ -21,18 +21,22 @@ Step 2: Open the 'Main_4Pi_SIM_reconstruction.m' code and set the initial parame
   - CUDA 11. 4. 136 driver
 
 # Tested run time
-225 s
+197.6 s
 
 # Expected output
-The 'SIM result' folder will be generated, which includes an ' Fig5a_ER_4Pi_SIM_A_parameter.mat' file where the estimated parameters (wave vector, initial phase, contrast, and OPLD phase) are saved; a 'Processing_Data.txt' file where the initial and processing parameters of the code are saved; ' SpectrumWienerFig5a_ER_4Pi_SIM_A.tif', which is the spectrum of the reconstructed image, and ' WienerFig5a_ER_4Pi_SIM_A.tif', which is the final reconstructed image.
+  - Fig5a_ER_4Pi_SIM_A_parameter.mat: estimated parameters (wave vector, initial phase, contrast, and OPLD phase)
+  - Processing_Data.txt: initial settings and processing parameters
+  - SpectrumWienerFig5a_ER_4Pi_SIM_A.tif: spectrum of the reconstructed image
+  - WienerFig5a_ER_4Pi_SIM_A.tif: final reconstructed image 
+
 
 # Contact
-For any questions / comments about this software, please contact zhanglab@westlake.edu.cn.
+For any questions/comments about this software, please contact zhanglab@westlake.edu.cn.
 
 # Copyright and Software License
 Copyright (c) 2024 @ Zhang Lab, Westlake University, Hangzhou, China
 
-The package is licenced under the [GNU GPL](https://www.gnu.org/licenses/). 
+The package is licensed under the [GNU GPL](https://www.gnu.org/licenses/). 
 
 
 
