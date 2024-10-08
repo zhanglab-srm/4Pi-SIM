@@ -11,7 +11,7 @@ Step 1: Download the example dataset and place the raw data and the 'OTF' folder
 
 The example dataset is available at: https://doi.org/10.6084/m9.figshare.25714068.
 
-Step 2: Open the code 'Main_4Pi_SIM_reconstruction.m'. Set the initial parameter 'isOPLD=1' and run the code. When selecting the raw data, the code will automatically determine the OTF with optimal OPLD for Wiener reconstruction. If standard reconstruction is preferred, setting the initial parameter to 'isOPLD=0' will cause the code to bypass OPLD estimation and reconstruct the data using an OTF with zero OPLD.
+Step 2: Open the code 'Main_4Pi_SIM_reconstruction.m'. Set the initial parameter 'isOPLD=1' and run the code. When selecting the raw data, the code will automatically determine the OTF with optimal OPLD for Wiener reconstruction. If standard reconstruction is preferred, setting the initial parameter to 'isOPLD=0' will bypass OPLD estimation and reconstruct the data using an OTF with zero OPLD.
 
 # Testing environments
   - Microsoft Windows 11 64-bit
