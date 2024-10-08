@@ -95,14 +95,14 @@ slider_handle = uicontrol('Style','Slider','Min',0,'Max',1,'Value',0,'SliderStep
 
   function plot_emd(phi)
 
-    plot(ax_x,t,real(exp(-i*phi)*x));
-    set(ax_x,'Ylim',[real(exp(-i*phi)*mx)-Mx,real(exp(-i*phi)*mx)+Mx]);
+    plot(ax_x,t,real(exp(-1i*phi)*x));
+    set(ax_x,'Ylim',[real(exp(-1i*phi)*mx)-Mx,real(exp(-1i*phi)*mx)+Mx]);
 
     for j = 1:k-1
-      plot(ax_imf(j),t,real(exp(-i*phi)*imf(j,:)));
+      plot(ax_imf(j),t,real(exp(-1i*phi)*imf(j,:)));
     end
-    plot(ax_res,t,real(exp(-i*phi)*imf(end,:)),'r');
-    set(ax_res,'Ylim',[real(exp(-i*phi)*mr)-Mr,real(exp(-i*phi)*mr)+Mr]);
+    plot(ax_res,t,real(exp(-1i*phi)*imf(end,:)),'r');
+    set(ax_res,'Ylim',[real(exp(-1i*phi)*mr)-Mr,real(exp(-1i*phi)*mr)+Mr]);
     set(T,'String',['Empirical Mode Decomposition, \phi/2\pi=',num2str(phi/(2*pi))]);
     drawnow;
   end

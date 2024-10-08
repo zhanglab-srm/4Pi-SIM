@@ -1,4 +1,4 @@
-function [imf,ort,nbits] = emd_local(x,t,stop,tst);
+function [imf,ort,nbits] = emd_local(x,t,stop,tst)
 
 %EMD_LOCAL  ("Local" Empirical Mode Decomposition) computes a local version of EMD
 %

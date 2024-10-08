@@ -40,7 +40,7 @@ if strcmpi(reply,'y')
       dir_list{end+1} = [base_dir,sub_dir];
     else
       filename = [base_dir,sub_dir,'/',file];
-      if ~isdir(filename)
+      if ~isfolder(filename)
         [p,n,e] = fileparts(filename);
         if strcmp(e,'mexglx')
           filename = [p,n,mexext];

@@ -51,7 +51,7 @@
 %         _  |IMF(i,:).*IMF(j,:)|
 %   ORT = \ _____________________
 %         /
-%         Ø        || X ||≤
+%         ÔøΩ        || X ||ÔøΩ
 %        i~=j
 %
 % and the number of iterations to extract each mode in NB_ITERATIONS
@@ -127,12 +127,12 @@
 % Hilbert spectrum for non-linear and non stationary time series analysis",
 % Proc. Royal Soc. London A, Vol. 454, pp. 903-995, 1998
 %
-% [2] G. Rilling, P. Flandrin and P. GonÁalves
+% [2] G. Rilling, P. Flandrin and P. GonÈè∞lves
 % "On Empirical Mode Decomposition and its algorithms",
 % IEEE-EURASIP Workshop on Nonlinear Signal and Image Processing
 % NSIP-03, Grado (I), June 2003
 %
-% [3] G. Rilling, P. Flandrin, P. GonÁalves and J. M. Lilly.,
+% [3] G. Rilling, P. Flandrin, P. GonÈè∞lves and J. M. Lilly.,
 % "Bivariate Empirical Mode Decomposition",
 % Signal Processing Letters (submitted)
 %
@@ -280,7 +280,7 @@ function stop = stop_EMD(r,MODE_COMPLEX,ndirs)
 if MODE_COMPLEX
   for k = 1:ndirs
     phi = (k-1)*pi/ndirs;
-    [indmin,indmax] = extr(real(exp(i*phi)*r));
+    [indmin,indmax] = extr(real(exp(1i*phi)*r));
     ner(k) = length(indmin) + length(indmax);
   end
   stop = any(ner < 3);
@@ -300,7 +300,7 @@ if MODE_COMPLEX
     case 1
       for k = 1:ndirs
         phi = (k-1)*pi/ndirs;
-        y = real(exp(-i*phi)*m);
+        y = real(exp(-1i*phi)*m);
         [indmin,indmax,indzer] = extr(y);
         nem(k) = length(indmin)+length(indmax);
         nzm(k) = length(indzer);
@@ -315,13 +315,13 @@ if MODE_COMPLEX
     case 2
       for k = 1:ndirs
         phi = (k-1)*pi/ndirs;
-        y = real(exp(-i*phi)*m);
+        y = real(exp(-1i*phi)*m);
         [indmin,indmax,indzer] = extr(y);
         nem(k) = length(indmin)+length(indmax);
         nzm(k) = length(indzer);
         [tmin,tmax,zmin,zmax] = boundary_conditions(indmin,indmax,t,y,y,NBSYM);
-        envmin(k,:) = exp(i*phi)*interp1(tmin,zmin,t,INTERP);
-        envmax(k,:) = exp(i*phi)*interp1(tmax,zmax,t,INTERP);
+        envmin(k,:) = exp(1i*phi)*interp1(tmin,zmin,t,INTERP);
+        envmax(k,:) = exp(1i*phi)*interp1(tmax,zmax,t,INTERP);
       end
       envmoy = mean((envmin+envmax),1);
       if nargout > 3

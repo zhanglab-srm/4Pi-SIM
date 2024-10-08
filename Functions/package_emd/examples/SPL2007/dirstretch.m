@@ -5,7 +5,7 @@ if nargin == 3
     warning('non unit modulus of direction argument ignored')
   end
   if isreal(dir) && any(abs(dir) ~= 1)
-    dir = exp(i*dir);
+    dir = exp(1i*dir);
   end
   if any(dir==0)
     error('invalid zero direction argument')
@@ -21,4 +21,4 @@ if nargin == 2
     dir = 1./tmp.*dir;
 end
 rotx = x.*conj(dir);
-y = coef.*dir.*real(rotx)+i*dir.*imag(rotx);
+y = coef.*dir.*real(rotx)+1i*dir.*imag(rotx);

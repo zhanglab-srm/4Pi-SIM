@@ -49,7 +49,7 @@ tt = find(absc_calc>=0 & absc_calc <=tmax);
 % fast rotating component
 fm1 = @(t)1+.4*sin(2*pi/tmax*t);
 am1 = @(t)1+.5*cos(pi/(2*tmax)*t);
-dirstretch1 = @(t) 3*exp(i*t*pi/(1.5*tmax));
+dirstretch1 = @(t) 3*exp(1i*t*pi/(1.5*tmax));
 x1 = dirstretch(am1(absc_calc).*fmodany(dt*fm1(absc_calc).').',dirstretch1(absc_calc));
 
 % slow rotating component

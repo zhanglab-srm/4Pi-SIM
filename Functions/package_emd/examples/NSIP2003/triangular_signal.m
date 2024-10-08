@@ -9,7 +9,7 @@
 %
 % output :   - x : signal
 
-function x = triang(N,p);
+function x = triang(N,p)
 
 K = ceil(N/(2*p-2));
 

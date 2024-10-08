@@ -19,7 +19,7 @@
 % G. Rilling, last modification 3.2006
 % gabriel.rilling@ens-lyon.fr
 
-function varargout = emd_visu(x,t,imf,i);
+function varargout = emd_visu(x,t,imf,i)
 
 if sum(size(t)>1)>1
   imf = t;

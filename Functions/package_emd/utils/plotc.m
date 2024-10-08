@@ -73,7 +73,7 @@ end
 
 % setup the complex plot
 phi = get_axes_phase;
-obj = plot(ax,x,real(exp(-i*phi)*y),args{:});
+obj = plot(ax,x,real(exp(-1i*phi)*y),args{:});
 addtag(ax,'complexplot') % needs to be after the plot command in case the latter redefines the Tag property of the axes (default behavior)
 addtag(obj,'complex');
 arrayfun(@(x)setappdata(obj(x),'complex_data',y(:,x)),1:length(obj));
@@ -90,7 +90,7 @@ set(fig,'toolbar','figure');
     ax_ch = findtag(ax,'complex');
     for child = ax_ch'
       z = getappdata(child,'complex_data');
-      z = real(exp(-i*phi)*z);
+      z = real(exp(-1i*phi)*z);
       set(child,'YData',z);
     end
     set(ax,'Xlim',Xl);

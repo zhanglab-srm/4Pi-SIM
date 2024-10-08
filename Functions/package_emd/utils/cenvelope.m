@@ -19,7 +19,7 @@
 %      env = cenvelope(t,x,8,'cubic');
 %
 %
-% [1] G. Rilling, P. Flandrin, P. GonÁalves and J. M. Lilly.,
+% [1] G. Rilling, P. Flandrin, P. GonÈè∞lves and J. M. Lilly.,
 % "Bivariate Empirical Mode Decomposition",
 % Signal Processing Letters (submitted)
 %
@@ -60,7 +60,7 @@ end
 
 for k = 1:Nphases
     phi = (k-1)*pi/Nphases;
-    y = real(exp(-i*phi)*x);
+    y = real(exp(-1i*phi)*x);
     [im,iM] = extr(y);
     [tmin,tmax,zmin,zmax] = boundary_conditions_emd(im,iM,t,y,x,NBSYM);
     envmin(k,:) = interp1(tmin,zmin,t,INTERP);

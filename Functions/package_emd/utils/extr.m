@@ -14,7 +14,7 @@
 %
 % G. Rilling, last modification: July 2002
 % gabriel.rilling@ens-lyon.fr
-function [indmin, indmax, indzer] = extr(x,t);
+function [indmin, indmax, indzer] = extr(x,t)
 
 if(nargin==1)
   t=1:length(x);
