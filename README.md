@@ -7,11 +7,11 @@ Matlab code for 4Pi-SIM reconstruction
 
 # How to run
 
-Step 1: Download the example dataset and place the raw data and the 'OTF' folder in the same directory as the main code 'Main_4Pi_SIM_reconstruction.m'.
+Step 1: Download the example dataset and place the raw data and the 'OTF' folder in the same directory as the main code, 'Main_4Pi_SIM_reconstruction.m'.
 
 The example dataset is available at: https://doi.org/10.6084/m9.figshare.25714068.
 
-Step 2: Open the code 'Main_4Pi_SIM_reconstruction.m'. Set the initial parameter 'isOPLD=1' and run the code. When selecting the raw data, the code will automatically determine the OTF with optimal OPLD for Wiener reconstruction. If standard reconstruction is preferred, setting the initial parameter to 'isOPLD=0' will bypass OPLD estimation and reconstruct the data using an OTF with zero OPLD.
+Step 2: Open 'Main_4Pi_SIM_reconstruction.m', set the initial parameter 'isOPLD=1', and run the code. The code will automatically select the OTF with the optimal OPLD for Wiener reconstruction when the raw data is chosen. For standard reconstruction, set the initial parameter to 'isOPLD=0' to bypass OPLD estimation and use an OTF with zero OPLD for data reconstruction.
 
 # Testing environments
   - Microsoft Windows 11 64-bit
@@ -24,14 +24,14 @@ Step 2: Open the code 'Main_4Pi_SIM_reconstruction.m'. Set the initial parameter
 197.6 s
 
 # Expected output
-  - Fig5a_ER_4Pi_SIM_A_parameter.mat: estimated parameters (wave vector, initial phase, contrast, and OPLD phase)
-  - Processing_Data.txt: initial settings and processing parameters
-  - SpectrumWienerFig5a_ER_4Pi_SIM_A.tif: spectrum of the reconstructed image
-  - WienerFig5a_ER_4Pi_SIM_A.tif: final reconstructed image 
+  - Fig5a_ER_4Pi_SIM_A_parameter.mat: Estimated parameters (wave vector, initial phase, contrast, and OPLD phase)
+  - Processing_Data.txt: Initial settings and processing parameters
+  - SpectrumWienerFig5a_ER_4Pi_SIM_A.tif: Spectrum of the reconstructed image
+  - WienerFig5a_ER_4Pi_SIM_A.tif: Final reconstructed image 
 
 
 # Contact
-For any questions/comments about this software, please contact zhanglab@westlake.edu.cn.
+For any questions/comments about this code, please contact zhanglab@westlake.edu.cn.
 
 # Copyright and Software License
 Copyright (c) 2024 @ Zhang Lab, Westlake University, Hangzhou, China
